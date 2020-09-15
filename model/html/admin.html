@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="../js/staffform.js"></script>
+    <title>Staff Detail Form</title>
+</head>
+<body>
+    <div class='title'>
+        Staff Detail Form
+    </div>
+    <div class="container">
+        <form class="Form" action="../php/admin.php" method = "POST">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">Name</label>
+                </div>
+                <div class="col-75">
+                    <input name="Name" type="text" id="Name" placeholder="Enter your Full Name" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="GetSubjectName" onclick="setSubjectName();">
+                <div class="col-25">
+                    <label for="Staff_Department">Department</label>
+                </div>
+                <div class="col-75">
+                    <select name="Staff_Department" id="Staff_Department" onchange="getDepartmentName();" required>
+                        <option value="" disabled selected>Enter your Department</option>
+                        <option value="CS">Computer Science</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="Civil">Civil</option>
+                        <option value="Mech">Mechanical</option>
+                        <option value="DS">Data Science</option>
+                        <option value="AI">Artifical Intelligence</option>
+                        <option value="Instru">Instrumental</option>
+                        <option value="EXTC">Electronics and Telecommunication</option>
+                    </select>
+                </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="Year">Year</label>
+                </div>   
+                <div class="col-75">
+                    <select name="Year" id="Year" onchange="getYear();" required>
+                        <option value="" disabled selected>Choose Year</option>
+                        <option value=1>First Year</option>
+                        <option value=2>Second Year</option>
+                        <option value=3>Third Year</option>
+                        <option value=4>Fourth Year</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-25">
+                    <label id="Sem">Sem Type</label>
+                </div>
+                <div class="col-75">
+                    <input name="Sem" type="radio" id="odd" value="odd" onclick="semtype();">
+                    <span class="Design_Radio_Label" >
+                        <label for="odd">Odd</label></span>
+                        &nbsp;&nbsp;
+                    <input name="Sem" type="radio" id="even" value="even" onclick="semtype();">
+                    <span class="Design_Radio_Label" >
+                        <label for="even">Even</label></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="Subject_Name">Subject Name:</label>
+                </div>   
+                <div class="col-75">
+                    <select name="Subject_Name" class="Subject" id="Subject_Name" onchange="getSubject();" required>
+                        <option value="" disabled selected>Choose your Subject</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="Academic_Year">Current Academic Year:</label>
+                </div>   
+                <div class="col-75">
+                    <select name="Academic_Year" id="Academic_Year" required onchange="getAcademicYear();">
+                        <option value="" disabled selected>Choose Academic Year</option>
+                        <option value=17>2017-18</option>
+                        <option value=18>2018-19</option>
+                        <option value=19>2019-20</option>
+                        <option value=20>2020-21</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">Chapter Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" size="30" id="Topic" placeholder="Enter the Chapter Topic - Subtopics" required>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-25">
+                    <label for="Dead_Date">Deadline Date:</label>
+                </div>
+                    <div class="col-75">
+                        <input type="datetime-local"  id="Dead_Date" required>
+                    </div>
+            </div>
+
+            <div class="row">
+                <div class="col-25">
+                    <input name="Submit" type="submit" id="Submit" value="Add Materials">
+                </div>
+            </div>
+        </form>
+      </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Staff Management Form</title>
+        <link rel="stylesheet" href="../css/add.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class='title'> Material Submission Form</div>
+        <div class="container">
+            <form action="action_page.php">
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="PDF_Materials">PDF Materials:</label>
+                    </div>
+                        <div class="col-75">
+                            <input type="file" name="PDF[]" accept=".pdf" id="PDF_Materials" multiple>
+                            <button class="Add_Button" name="AddPDF">Add</button>
+                            <button name="DeletePDF" class="Delete_Button">Delete</button>
+                        </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="PPT_Materials">PPT Materials:</label>
+                    </div>
+                        <div class="col-75">
+                            <input type="file" name="PPT[]" accept=".pptx" id="PPT_Materials" multiple>
+                            <button name="AddPPT" class="Add_Button">Add</button>
+                            <button name="DeletePPT" class="Delete_Button">Delete</button>
+                        </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="Assignments">Assignments (Docs):</label>
+                    </div>
+                        <div class="col-75">
+                            <input type="file" name="DOCS[]" accept=".docx" id="Assignments" multiple>
+                            <button name="AddAssignment" class="Add_Button" style="left: 52.65%;">Add</button>
+                            <button name="DeleteAssignment" class="Delete_Button" style="left: 52.7%;">Delete</button>
+                        </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="Quiz">Quiz (URL):</label>
+                    </div>
+                        <div class="col-75">
+                            <input type="text" size="30" id="Quiz" placeholder="Enter the Quiz URL">
+                            <button name="AddQuiz" class="Add_Quiz">Add</button>
+                            <button name="DeleteQuiz" class="Delete_Quiz">Delete</button>
+                        </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="Video">Video URL:</label>
+                    </div>
+                        <div class="col-75">
+                            <input type="text" size="30" id="Video" placeholder="Enter the Video URL">
+                            <button name="AddVideo" class="Add_Video">Add</button>
+                            <button name="DeleteVideo" class="Delete_Video">Delete</button>
+                        </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="Publish_Date">Published Date:</label>
+                    </div>
+                        <div class="col-75">
+                            <input name="publish" type="datetime-local" value="<?php echo $_POST['publish'] ?? ''; ?>" id="Publish_Date" required>
+                        </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                       <span><input  type="button" id="Add_More_Materials" value="Add More Materials"></span> 
+                    </div>
+                    
+                    <div class="col-75">
+                        <a href="../html/admin.html"><input type="button" id="Back" value="Back"></a>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </body>
+</html>

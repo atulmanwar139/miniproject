@@ -1,0 +1,103 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family : sans-serif;
+  background: #34495e;
+}
+.title{
+  text-align: center;
+  color: white;
+  padding: 20px 20px 20px 0;
+  width: 300px;
+  text-transform: upercase;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+input[type=text], select{
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  /* Style the label to display next to the inputs */
+  label {
+    padding: 12px 5px 5px 50px;
+    display: inline-block;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  /* Style the container */
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  /* Floating column for labels: 25% width */
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  /* Floating column for inputs: 75% width */
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.Design_Radio_Label {
+    color: black;
+}
+
+.col-75 input[type="text"]:focus,.col-75 input[type="text"]:focus{
+  width: 280px;
+  border-color: #2ecc71;
+}
+
+.col-25 input[type="submit"]{
+  border: 0;
+  background: none;
+  margin: 10px auto;
+  text-align: center;
+  align-items: center;
+  border: 2px solid #2ecc71;
+  padding: 14px 40px;
+  outline: none;
+  color:black;
+  border-radius: 24px;
+  transition: 0.25s; 
+  cursor: pointer;
+}
+.col-25 input[type="submit"]:hover{
+  background: #2ecc71;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 650px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
